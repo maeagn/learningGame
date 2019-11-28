@@ -1,0 +1,93 @@
+body {
+    font-family: 'Black Han Sans', sans-serif;
+    background-color: #e4e0dc;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    height: 350px;
+    border-radius: 1rem;
+    animation: flip 2s ease-in forwards;
+  }
+
+.bunny {
+    background-image: url(./image/bunnyCard.svg);
+}
+
+.cat {
+    background-image: url(./image/catCard.svg);
+}
+
+.hamster {
+    background-image: url(./image/hamsterCard.svg);
+}
+
+.panda {
+    background-image: url(./image/pandaCard.svg);
+}
+
+.seal {
+    background-image: url(./image/sealCard.svg);
+}
+
+.turtle {
+    background-image: url(./image/turtleCard.svg);
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.button {
+  color: black;
+  box-shadow: 5px 10px #a2eae0;
+  background-color: #f9acbb;
+  border: 2px solid;
+  border-radius: 50%;
+  font-size: 25px;
+  font-family: 'Open Sans', sans-serif;
+  height: 80px;
+  width: 200px;
+  margin: 30px;
+  font-weight: bold;
+}
+
+@keyframes flipUp {
+  0% {transform: rotateY(0deg);}
+  100% {transform: rotateY(180deg);}
+}
+@keyframes flipDown {
+  0% {transform: rotateY(180deg);}
+  100% {transform: rotateY(0deg);}
+}
+
+@keyframes zoomOut {
+  0% {transform: scale(1);}
+  100% {transform: scale(0);}
+}
+
+.backCard {
+  background-image: url(./image/background.png);
+  animation: flipDown 0.5s ease-out forwards;
+}
+
+.frontCard {
+  animation: flipUp 0.5s ease-in forwards;
+}
+
+.winning {
+  animation: zoomOut 1s ease forwards;
+}
